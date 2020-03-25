@@ -1,7 +1,10 @@
-import React, {Fragment} from 'react'
+import React from 'react'
+import { Link } from 'gatsby'
 import navbarstyles from '../css/navbar.module.css'
 import logo from "../images/travelastro_trans.png"
 import black from "../images/travelastro_trans_black.png"
+import { FaAlignRight } from 'react-icons'
+import socialicons from '../constants/social-icons'
 
 class Navbar extends React.Component {
     constructor() {
@@ -11,6 +14,8 @@ class Navbar extends React.Component {
          normal: logo
         }
     }
+
+
 
     componentDidMount() {    
         document.addEventListener("scroll", this.handleScroll);
@@ -39,12 +44,12 @@ class Navbar extends React.Component {
     render() {
         return (
             <div className={`nav ${navbarstyles.nav}`} onScroll={this.handleScroll}>
-                <Fragment>
+                <>
                     <div className={navbarstyles.logo_container}>
                         <img className={navbarstyles.logo} src={this.state.normal} alt="Travel Astronomy logo" />
                     </div>
-                </Fragment>
-                <Fragment>
+                </>
+                <>
                 <div className={`navigation_container ${navbarstyles.navigation_container}`}>
                     <ul>
                         <li>Blog</li>
@@ -53,7 +58,7 @@ class Navbar extends React.Component {
                         <li>Contact</li>
                     </ul>  
                 </div>
-                </Fragment>
+                </>
             </div> 
         )
     }
