@@ -40,6 +40,12 @@ body {
     --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   }
 
+main{
+  min-height: 100vh;
+  display:flex;
+  flex-direction: column;
+}
+
 .btn-white,
 .btn-primary {
   text-transform: uppercase;
@@ -48,7 +54,6 @@ body {
   color: var(--mainWhite);
   border: 2px solid var(--mainWhite);
   padding: 0.9rem 1.6rem;
-  display: inline-block;
   transition: var(--mainTransition);
   cursor: pointer;
 }

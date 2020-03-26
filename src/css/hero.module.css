@@ -17,3 +17,16 @@
     margin-top: 27%;
     text-align: center;
   }
+
+  .button {
+    position: absolute;
+    width: 16%;
+    height: auto;
+    background: rgba(0, 0, 0, 0);
+    font-size: 0.9rem;
+    color: white;
+    display:block;
+    margin-top: 33%;
+    margin-left: 41.7%;
+    text-align: center;
+  }

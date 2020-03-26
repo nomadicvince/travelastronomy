@@ -1,10 +1,10 @@
 import React from 'react'
-import { Link } from 'gatsby'
+// import { Link } from 'gatsby'
 import navbarstyles from '../css/navbar.module.css'
 import logo from "../images/travelastro_trans.png"
 import black from "../images/travelastro_trans_black.png"
-import { FaAlignRight } from 'react-icons'
-import socialicons from '../constants/social-icons'
+// import { FaAlignRight } from 'react-icons'
+// import socialicons from '../constants/social-icons'
 
 class Navbar extends React.Component {
     constructor() {
