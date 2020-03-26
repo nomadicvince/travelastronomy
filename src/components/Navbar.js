@@ -27,7 +27,7 @@ class Navbar extends React.Component {
             const nav = document.querySelector('.nav');
             const nav_container = document.querySelector('.navigation_container');         
             const windowsScrollTop = window.pageYOffset;
-            const height = 150;
+            const height = 10;
         
             if (windowsScrollTop > height) {
                 nav.style.backgroundColor = 'rgba(255, 255, 255, 1)';

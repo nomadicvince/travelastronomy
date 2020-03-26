@@ -2,11 +2,14 @@ import React from 'react'
 
 //Components
 import Layout from '../components/Layout'
+import aboutstyles from '../css/about.module.css'
 
 const About = () => {
     return (
         <Layout>
-           All about me!!!!
+           <div className={aboutstyles.about}>
+               All about me
+           </div>
         </Layout>
     )
 }

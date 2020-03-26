@@ -2,11 +2,14 @@ import React from 'react'
 
 //Components
 import Layout from '../components/Layout'
+import blogstyles from '../css/blog.module.css'
 
 const Blog = () => {
     return (
         <Layout>
-           This is my blog!!!!
+           <div className={blogstyles.blog}>
+               Read the blog
+           </div>
         </Layout>
     )
 }
