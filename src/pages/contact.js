@@ -1,13 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class Contact extends Component {
-    render() {
-        return (
-            <div>
-                This is my contact page!!!
-            </div>
-        )
-    }
+//Components
+import Layout from '../components/Layout'
+
+const About = () => {
+    return (
+        <Layout>
+           Contact me!!!!
+        </Layout>
+    )
 }
 
-export default Contact;
+export default About;

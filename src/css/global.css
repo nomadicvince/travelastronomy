@@ -10,6 +10,7 @@
 body {
     font-family: 'Oxygen', sans-serif;
     background: var(--mainBlack);
+    color: var(--mainWhite);
     line-height: 1.4;
     font-size: 1rem;
   }
@@ -28,7 +29,7 @@ body {
   }
 
 :root {
-    --primaryColor: #3fd0d4;
+    --primaryColor: #9e3be0;
     --mainWhite: #fff;
     --offWhite: #f7f7f7;
     --mainBlack: #000;
