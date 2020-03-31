@@ -1,7 +1,14 @@
 .blog {
-    margin-top: 109px;
+    position: relative;
     background: var(--mainWhite);
     width: 100%;
     height: 100vh;
+    color: var(--mainBlack);
+}
+
+.blog_content {
+    background: var(--mainWhite);
+    width: 100%;
+    height: 50vh;
     color: var(--mainBlack);
 }

@@ -5,13 +5,14 @@ import { graphql, useStaticQuery } from "gatsby"
 const SiteMetadata = ({ pathname }) => {
     const {
       site: {
-        siteMetadata: { siteUrl, title, description },
+        siteMetadata: { siteUrl, title, description, tagline },
       },
     } = useStaticQuery(graphql`
       query SiteMetadata {
         site{
           siteMetadata{
             title
+            tagline
             description
             author
             siteURL
@@ -22,7 +23,7 @@ const SiteMetadata = ({ pathname }) => {
 
   
     return (
-      <Helmet defer={false} defaultTitle={title} titleTemplate={`%s | ${title}`}>
+      <Helmet defer={false} defaultTitle={`${title} | ${tagline}`} titleTemplate={`%s | ${title}`}>
         <html lang="en" />
         <meta name="description" content={`${description}`} />
         <link rel="canonical" href={`${siteUrl}${pathname}`} />

@@ -53,8 +53,8 @@ class Navbar extends React.Component {
                 <div className={`navigation_container ${navbarstyles.navigation_container}`}>
                     <ul>
                         <li>Blog</li>
-                        <li>TravelAstropedia</li>
                         <li>About</li>
+                        <li>TravelAstropedia</li>
                         <li>Contact</li>
                     </ul>  
                 </div>
