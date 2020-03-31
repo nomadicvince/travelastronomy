@@ -1,5 +1,6 @@
 import React from 'react'
-// import { Link } from 'gatsby'
+import AniLink from "gatsby-plugin-transition-link/AniLink";
+import links from "../constants/links"
 import navbarstyles from '../css/navbar.module.css'
 import logo from "../images/travelastro_trans.png"
 import black from "../images/travelastro_trans_black.png"
@@ -46,16 +47,21 @@ class Navbar extends React.Component {
             <div className={`nav ${navbarstyles.nav}`} onScroll={this.handleScroll}>
                 <>
                     <div className={navbarstyles.logo_container}>
-                        <img className={navbarstyles.logo} src={this.state.normal} alt="Travel Astronomy logo" />
+                        <AniLink fade to="/">
+                            <img className={navbarstyles.logo} src={this.state.normal} alt="Travel Astronomy logo" />
+                        </AniLink>
                     </div>
                 </>
                 <>
                 <div className={`navigation_container ${navbarstyles.navigation_container}`}>
                     <ul>
-                        <li>Blog</li>
-                        <li>About</li>
-                        <li>TravelAstropedia</li>
-                        <li>Contact</li>
+                    {links.map((item, index) => {
+            return (
+              <li key={index}>
+                <AniLink fade to={item.path}>{item.text}</AniLink>
+              </li>
+            )
+          })}
                     </ul>  
                 </div>
                 </>
