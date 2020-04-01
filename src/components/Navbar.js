@@ -1,6 +1,6 @@
 import React from 'react'
-import AniLink from "gatsby-plugin-transition-link/AniLink";
-import links from "../constants/links"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
+import links from '../constants/links'
 import navbarstyles from '../css/navbar.module.css'
 import logo from "../images/travelastro_trans.png"
 import black from "../images/travelastro_trans_black.png"
@@ -12,7 +12,8 @@ class Navbar extends React.Component {
         super()
    
         this.state = {
-         normal: logo
+         normal: logo,
+         color: "rgba(255, 255, 255, 1)"
         }
     }
 
@@ -26,7 +27,7 @@ class Navbar extends React.Component {
     handleScroll = (e) => {
             e.preventDefault();
             const nav = document.querySelector('.nav');
-            const nav_container = document.querySelector('.navigation_container');         
+            const nav_container = document.querySelector('.navigation_container');    
             const windowsScrollTop = window.pageYOffset;
             const height = 10;
         
@@ -35,11 +36,14 @@ class Navbar extends React.Component {
                 nav.style.transition = '.6s ease-in-out';
                 nav_container.style.color = 'rgba(0, 0, 0, 1)';
                 this.setState({normal: black});
+                this.setState({color: "rgba(0, 0, 0, 1)"});
                 } else if (windowsScrollTop < height) {
                 nav.style.backgroundColor = 'rgba(0, 0, 0, .7)';
                 nav_container.style.color = 'rgba(255, 255, 255, 1)';
                 this.setState({normal: logo});
+                this.setState({color: "rgba(255, 255, 255, 1)"});
             } 
+
     }
 
     render() {
@@ -55,13 +59,14 @@ class Navbar extends React.Component {
                 <>
                 <div className={`navigation_container ${navbarstyles.navigation_container}`}>
                     <ul>
-                    {links.map((item, index) => {
-            return (
-              <li key={index}>
-                <AniLink fade to={item.path}>{item.text}</AniLink>
-              </li>
-            )
-          })}
+                 {links.map((item, index) => {
+                        return (
+                        <li key={index}>
+                            <AniLink style={{color: this.state.color, textDecoration: 'none', }} fade to={item.path}>{item.text}</AniLink>
+                        </li>
+                        )
+                     })} 
+
                     </ul>  
                 </div>
                 </>

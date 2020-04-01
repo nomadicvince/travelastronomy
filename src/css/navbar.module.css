@@ -30,75 +30,21 @@
   .navigation_container {
     width: 65%;
     position: relative;
-    color: white;
     font-size: 1.1rem;
     text-transform: uppercase;
     margin-top: 2.4%;
     margin-left: 400px;
   }
   
-  .navigation_container ul li {
+  .navigation_container li {
     display:inline;
     padding: 16px;
   }
 
-  .navigation_container a:link {
-    text-decoration: none;
-    color: var(--mainWhite);
-    transition: var(--mainTransition);
-  }
-
-  .navigation_container a:visited {
-    text-decoration: none;
-    color: var(--mainWhite);
-  }
-
-  .navigation_container a:hover {
-    text-decoration: none;
-    color: var(--primaryColor);
-  }
-
-  .nav-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 1.25rem;
-  }
-  .logo-btn {
-    background: transparent;
-    border: none;
-    outline: none;
-  }
-  .logo-btn:hover {
-    cursor: pointer;
-  }
-  .logo-icon {
-    color: var(--primaryColor);
-    font-size: 1.5rem;
-  }
-  
-  .nav-links {
-    list-style-type: none;
-    transition: var(--mainTransition);
-    height: 0;
-    overflow: hidden;
-  }
-  .show-nav {
+ .show-nav {
     height: 216px;
   }
-  .nav-links a {
-    display: block;
-    padding: 1rem 1.25rem;
-    text-decoration: none;
-    text-transform: capitalize;
-    color: var(--mainBlack);
-    transition: var(--mainTransition);
-    font-weight: bold;
-    letter-spacing: var(--mainSpacing);
-  }
-  .nav-links a:hover {
-    color: var(--primaryColor);
-  }
+
   .nav-social-links {
     display: none;
   }
