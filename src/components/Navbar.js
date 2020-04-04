@@ -17,12 +17,9 @@ class Navbar extends React.Component {
         }
     }
 
-
-
     componentDidMount() {    
         document.addEventListener("scroll", this.handleScroll);
     }
-
 
     handleScroll = (e) => {
             e.preventDefault();

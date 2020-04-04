@@ -1,7 +1,6 @@
 import React from 'react'
 import Wrong from '../components/Error'
 import StyledError from '../components/StyledError'
-// import { Link } from 'gatsby'
 import { graphql } from 'gatsby'
 
 const Error = ({data}) => {

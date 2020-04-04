@@ -1,0 +1,101 @@
+.contact{
+    margin-top: 109px;
+    background: var(--mainWhite);
+    width: 100%;
+    height: 100vh;
+    color: var(--mainBlack);
+}
+
+.contact_content {
+    position: relative;
+    background: var(--mainWhite);
+    width: 100%;
+    height: auto;
+    color: var(--mainBlack);
+    padding: 25px;
+}
+
+.center {
+    width: 85vw;
+    margin: 0 auto;
+  }
+
+  button, input, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    box-sizing: border-box;
+  }
+
+  input:hover::placeholder, textarea:hover::placeholder {
+    color: var(--mainWhite);
+    font-weight: 800;
+    transition: var(--mainTransition);
+  }
+
+  input:hover, textarea:hover {
+    border-radius: 5px;
+    border-color: var(--primaryColor);
+    color: var(--mainWhite);
+  }
+
+  input:focus, textarea:focus{
+    outline: none;
+    border-radius: 5px;
+    border: var(--primaryColor) solid 1px;
+    color: var(--mainGrey);
+    transition: var(--mainTransition);
+  }
+
+  @media screen and (min-width: 992px) {
+    .center {
+      width: 50vw;
+      margin: 0 auto;
+    }
+  }
+
+.form {
+    width: 100%;
+    margin: 0 auto;
+    border: .2px solid rgb(184, 184, 184);
+    border-radius: 4px;
+    padding: 16px;
+}
+
+.contact label {
+    text-transform: capitalize;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.formControl,
+.submit {
+    width: 100%;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid var(--darkGrey);
+    border-radius: 0.25rem;
+}
+
+.formControl:hover {
+    background: var(--lightPurple);
+    color: var(--mainWhite);
+    border-color: var(--mainGrey);
+    transition: var(--mainTransition);
+}
+
+.submit {
+    background-color: var(--primaryColor);
+    border-color: var(--primaryColor);
+    text-transform: uppercase;
+    color: var(--mainWhite);
+    transition: var(--mainTransition);
+    cursor: pointer;
+}
+      
+.submit:hover {
+    background: var(--darkGrey);
+    color: var(--mainBlack);
+    border-color: var(--darkGrey);
+}
+      
