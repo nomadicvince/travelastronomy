@@ -1,16 +1,17 @@
 .content {
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: auto;
     background: var(--mainWhite); 
     color: var(--mainBlack);
 }
 
 .content_container {
-    width: 60%;
+    width: 80%;
     font-size: 1.2rem;
     text-align: center;
     margin: 0 auto;
-    padding: 45px 20px;
+    padding: 45px 0;
+    color: var(--mainBlack);
 }
 
