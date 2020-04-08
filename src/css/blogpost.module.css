@@ -25,6 +25,7 @@
   transform: translate(-50%, -50%);
   opacity: 0;
   text-transform: uppercase;
+  text-decoration: none;
   letter-spacing: var(--mainSpacing);
   color: var(--mainWhite);
   border: 2px solid var(--mainWhite);
@@ -71,7 +72,7 @@
   margin-right: 0.4rem;
 }
 .details {
-  color: var(--darkGrey);
-  text-transform: uppercase;
-  text-align: right;
+  color: var(--mainBlack);
+  text-align: left;
+  padding: .1rem 0rem;
 }
