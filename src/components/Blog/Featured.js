@@ -1,8 +1,9 @@
 import React from 'react'
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import { useStaticQuery, graphql } from 'gatsby'
-import Blogs from '../Blog/Blogs'
+import FeaturedBlogs from '../Blog/FeaturedBlogs'
 import itemsstyles from '../../css/items.module.css'
+import Title from '../../components/Title'
 
 const getFeaturedPosts = graphql`
 query{
@@ -13,7 +14,7 @@ query{
           name
           slug
           country
-          date
+          date(formatString: "MMMM D, YYYY")
           featured        
           featurePhoto{
             title
@@ -34,9 +35,10 @@ query{
 
     return (
         <div className={itemsstyles.tours}>
+            <Title title="Featured" subtitle="Posts" />
             <div className={itemsstyles.center}>
             {blog.map(({node})=> {
-                return <Blogs key={node.id} post={node}/>
+                return <FeaturedBlogs key={node.id} post={node}/>
             })}
             </div>
             <AniLink fade to="/blog" className="btn-primary">All Posts</AniLink>
