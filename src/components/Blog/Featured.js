@@ -7,25 +7,28 @@ import Title from '../../components/Title'
 
 const getFeaturedPosts = graphql`
 query{
-    featuredBlog: allContentfulBlogPost(filter:{featured:{eq:true}}){
-      edges{
-        node{
-            id
-          name
-          slug
-          country
-          date(formatString: "MMMM D, YYYY")
-          featured        
-          featurePhoto{
-            title
-            fluid(maxWidth: 800){
-              ...GatsbyContentfulFluid_withWebp
-            }
+  featuredBlog: allContentfulBlogPost(filter:{featured:{eq:true}}, sort:
+  {
+    fields: [date], order:DESC
+  }){
+    edges{
+      node{
+          id
+        name
+        slug
+        country
+        date(formatString: "MMMM Do, YYYY")
+        featured        
+        featurePhoto{
+          title
+          fluid(maxWidth: 800, maxHeight: 600){
+            ...GatsbyContentfulFluid_withWebp
           }
         }
       }
     }
   }
+}
 `
 
  const Featured = ({data}) => {

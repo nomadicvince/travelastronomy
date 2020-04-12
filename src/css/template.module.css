@@ -1,6 +1,15 @@
 .template {
-  padding: 4rem 0;
+  padding: .3rem 0;
 }
+
+.template_content {
+  background: var(--mainWhite);
+  width: 100%;
+  height: auto;
+  color: var(--mainBlack);
+  padding:  20px 0;
+}
+
 .center {
   width: 80vw;
   margin: 0 auto;
@@ -15,10 +24,8 @@
 .image {
   box-shadow: var(--lightShadow);
 }
-.template h2 {
-  text-transform: capitalize;
+.title {
   letter-spacing: var(--mainSpacing);
-  margin-bottom: 1rem;
 }
 .info {
   display: flex;

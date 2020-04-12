@@ -4,7 +4,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-
 }
 
 body {
@@ -22,7 +21,7 @@ body {
   h6 {
     font-family: "Roboto", sans-serif;
     margin-bottom: 1.25rem;
-    letter-spacing: var(--mainSpacing);
+    letter-spacing: var(--altSpacing);
   }
   p {
     margin-bottom: 1.25rem;
@@ -38,6 +37,7 @@ body {
     --darkGrey: #cfcfcf;
     --mainTransition: all 0.3s linear;
     --mainSpacing: 4px;
+    --altSpacing: 3px;
     --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.5);
     --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
   }
