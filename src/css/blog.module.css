@@ -13,3 +13,12 @@
     color: var(--mainBlack);
     padding: 20px 0;
 }
+
+.center {
+    width: 90vw;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+  }

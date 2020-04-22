@@ -7,7 +7,7 @@ import Title from '../../components/Title'
 
 const getFeaturedPosts = graphql`
 query{
-  featuredBlog: allContentfulBlogPost(filter:{featured:{eq:true}}, sort:
+  featuredBlog: allContentfulBlogPost(filter:{featured:{eq:true}}, limit: 6, sort:
   {
     fields: [date], order:DESC
   }){
@@ -44,7 +44,7 @@ query{
                 return <FeaturedBlogs key={node.id} post={node}/>
             })}
             </div>
-            <AniLink fade to="/blog" className="btn-primary">All Posts</AniLink>
+            <AniLink fade to="/blogs" className="btn-primary">All Posts</AniLink>
         </div>
     )
 }

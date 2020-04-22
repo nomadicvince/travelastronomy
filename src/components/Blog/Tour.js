@@ -5,9 +5,9 @@ import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 import PropTypes from "prop-types"
 
-const Tour = ({post}) => {
+const Tour = ({tour}) => {
 
-    const {name, slug, country, date, featurePhoto} = post;
+    const { slug, name, date, featurePhoto, country } = tour
 
     let mainImage = featurePhoto.fluid;
     
@@ -29,6 +29,8 @@ const Tour = ({post}) => {
         </div>
     )
 }
+
+
 
 Tour.propTypes = {
     tour: PropTypes.shape({

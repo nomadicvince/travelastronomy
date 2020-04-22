@@ -15,7 +15,7 @@ export default ({data}) => (
 <Layout>
     <StyledHero home="true" img={data.heroImg.childImageSharp.fluid}>
         <p className={herostyles.tagline}>Travel the World. Explore the Universe</p>
-        <AniLink fade to='/blog' className={`btn-white ${herostyles.button}`}>Read Blog</AniLink>
+        <AniLink fade to='/blogs' className={`btn-white ${herostyles.button}`}>Read Blog</AniLink>
     </StyledHero>
   <Intro />
   <Content />

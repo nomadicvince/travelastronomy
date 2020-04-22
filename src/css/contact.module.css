@@ -78,7 +78,7 @@
 }
 
 .formControl:hover {
-    background: var(--lightPurple);
+    background: var(--deepPurple);
     color: var(--mainWhite);
     border-color: var(--mainGrey);
     transition: var(--mainTransition);

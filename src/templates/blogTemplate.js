@@ -50,7 +50,7 @@ query($slug:String!) {
       offthebeatenpath
     }
     featurePhoto{
-      fluid{
+      fluid(maxWidth: 6000, quality: 100){
         ...GatsbyContentfulFluid_withWebp
       }
     }
