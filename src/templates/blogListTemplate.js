@@ -14,7 +14,7 @@ import Title from '../components/Title'
 
 const blogListTemplate = (props) => {
 
-      const {data} = props;
+    const {data} = props;
     const {currentPage, numPages} = props.pageContext;  
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages  
@@ -22,9 +22,7 @@ const blogListTemplate = (props) => {
       currentPage - 1 === 1 ? `/blogs/` : `/blogs/${currentPage - 1}`
     const nextPage = `/blogs/${currentPage + 1}`
 
-    console.log({data});
-
-    
+  
     return (
  
           <Layout>
