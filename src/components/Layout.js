@@ -13,9 +13,9 @@ const Layout = ({children}) => {
     return (
         <main>
             <SiteMetadata />
-           <Navbar />
-           {children}
-           <Footer /> 
+            <Navbar />
+            {children}
+            <Footer /> 
         </main>
     )
 }

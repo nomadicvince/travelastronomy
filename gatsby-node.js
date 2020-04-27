@@ -30,7 +30,7 @@ exports.createPages = async({ actions, graphql}) => {
     //amount of posts
     const posts = data.blogs.edges;
     //posts per page
-    const postsPerPage = 6;
+    const postsPerPage = 8;
     //number of pages
     const numPages = Math.ceil(posts.length/postsPerPage);
 

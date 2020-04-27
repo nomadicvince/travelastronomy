@@ -3,6 +3,7 @@ import {graphql} from 'gatsby'
 import AniLink from "gatsby-plugin-transition-link/AniLink";
 import Image from 'gatsby-image'
 import poststyles from '../css/blogpost.module.css'
+import StyledHero from '../components/StyledHero'
 
 //Components
 import Layout from '../components/Layout'
@@ -13,7 +14,7 @@ import Title from '../components/Title'
 
 const blogListTemplate = (props) => {
 
-    const {data} = props;
+      const {data} = props;
     const {currentPage, numPages} = props.pageContext;  
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages  
@@ -21,10 +22,14 @@ const blogListTemplate = (props) => {
       currentPage - 1 === 1 ? `/blogs/` : `/blogs/${currentPage - 1}`
     const nextPage = `/blogs/${currentPage + 1}`
 
+    console.log({data});
+
     
     return (
+ 
           <Layout>
-            <div className={blogstyles.blog_content}>
+            <StyledHero img={data.oceanImg.childImageSharp.fluid} />
+            <div className={blogstyles.blog_content}>               
                <Title title="Blog" subtitle="Posts" />
                <div className={blogstyles.center}>
                  {data.posts.edges.map(({node})=> {
@@ -99,10 +104,17 @@ query getPosts ($skip:Int!, $limit:Int!){
         date (formatString: "MMMM Do, YYYY")
         slug
         featurePhoto{
-          fluid(maxWidth: 900, maxHeight: 600){
+          fluid(maxWidth: 1200, maxHeight: 1100){
             ...GatsbyContentfulFluid_withWebp
           }
         }
+      }
+    }
+  }
+  oceanImg:file(relativePath: {eq: "oceanworld.png"}){
+    childImageSharp{
+      fluid(quality: 90, maxWidth: 4060){
+        ...GatsbyImageSharpFluid_withWebp
       }
     }
   }

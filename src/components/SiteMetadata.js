@@ -31,7 +31,7 @@ const SiteMetadata = ({ pathname }) => {
           name="viewport"
           content="width=device-width,initial-scale=1,shrink-to-fit=no,viewport-fit=cover"
         />
-  
+          
         <meta property="og:url" content={siteUrl} />
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content={title} />

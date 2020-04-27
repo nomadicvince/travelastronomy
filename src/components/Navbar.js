@@ -4,8 +4,7 @@ import links from '../constants/links'
 import navbarstyles from '../css/navbar.module.css'
 import logo from "../images/travelastro_trans.png"
 import black from "../images/travelastro_trans_black.png"
-// import { FaAlignRight } from 'react-icons'
-// import socialicons from '../constants/social-icons'
+
 
 class Navbar extends React.Component {
     constructor() {
