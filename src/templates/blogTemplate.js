@@ -3,28 +3,35 @@ import {graphql} from 'gatsby'
 import Layout from '../components/Layout'
 import StyledHero from '../components/StyledHero'
 import styles from '../css/template.module.css'
+import AniLink from "gatsby-plugin-transition-link/AniLink";
 
 const blogTemplate = ({data}) => {
 
-  const {name, city, region, country, date, content:{content}, additional:{additional}, offthebeatenpath:{offthebeatenpath}, featurePhoto, location:{lat, lon}} = data.blog
-
+  const {name, city, region, country, author, date, content:{content}, additional:{additional}, offthebeatenpath:{offthebeatenpath}, featurePhoto, location:{lat, lon}} = data.blog
  
     return (
         <Layout>
           <StyledHero img={featurePhoto.fluid}/>
           <div className={styles.template_content}>
             <div className={styles.template}>
-              <p>{name}<br />
-              {city}, {region}, {country}<br />
-              Latitude: {lat}, Longitude: {lon}<br />
-              {date}
-              </p>
+              <span className={styles.title}>{name}</span><br/>
+              <span className={styles.city}>{city}, {region}, {country}</span><br />
+              <span className={styles.location}>Latitude: {lat}, Longitude: {lon}</span>
+              <div className={styles.date}>
+                <p className={styles.author}>By {author}</p>
+              </div>
+              <div className={styles.date}>
+                <p>{date}</p>
+              </div>
               <div>
                 <p>{content}</p>
                 <p>{additional}</p>
                 <p>{offthebeatenpath}</p>
               </div>
-            </div>            
+              <div>
+              <AniLink className={styles.link} fade to='/' >Back to Home</AniLink>
+              </div>
+            </div>
           </div>
         </Layout>
     )
@@ -39,6 +46,7 @@ query($slug:String!) {
     city
     region
     country
+    author
     date(formatString: "MMMM Do, YYYY")
     content{
       content

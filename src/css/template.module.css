@@ -1,5 +1,7 @@
 .template {
   padding: .3rem 0;
+  width: 85%;
+  margin: 2px auto;
 }
 
 .template_content {
@@ -26,7 +28,43 @@
 }
 .title {
   letter-spacing: var(--mainSpacing);
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.2rem 0;
 }
+
+.city {
+  letter-spacing: var(--citySpacing);
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.2rem 0;
+}
+
+.location {
+  letter-spacing: var(--citySpacing);
+  font-size: 0.9rem;
+  font-weight: 400;
+  margin: 0.2rem 0;
+}
+
+.date{
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 1rem 0;
+}
+
+.author{
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+
+.link{
+  text-decoration: none;
+}
+
+
+
 .info {
   display: flex;
   flex-wrap: wrap;
@@ -49,7 +87,9 @@
   text-transform: capitalize;
 }
 .template h2 {
-  margin: 2rem 0;
+  margin: 0.2rem 0;
+  font-size: 2rem;
+  font-weight: bold;
 }
 .journey {
   margin: 3rem 0;

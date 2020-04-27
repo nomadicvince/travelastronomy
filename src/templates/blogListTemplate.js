@@ -21,8 +21,7 @@ const blogListTemplate = (props) => {
     const prevPage =
       currentPage - 1 === 1 ? `/blogs/` : `/blogs/${currentPage - 1}`
     const nextPage = `/blogs/${currentPage + 1}`
-
-  
+    
     return (
  
           <Layout>
