@@ -55,14 +55,13 @@ class Navbar extends React.Component {
                 <>
                 <div className={`navigation_container ${navbarstyles.navigation_container}`}>
                     <ul>
-                 {links.map((item, index) => {
-                        return (
-                        <li key={index}>
-                            <AniLink style={{color: this.state.color, textDecoration: 'none', }} fade to={item.path}>{item.text}</AniLink>
-                        </li>
-                        )
-                     })} 
-
+                        {links.map((item, index) => {
+                            return (
+                            <li key={index}>
+                                <AniLink style={{color: this.state.color, textDecoration: 'none',}} fade to={item.path}>{item.text}</AniLink>
+                            </li>
+                            )
+                        })} 
                     </ul>  
                 </div>
                 </>

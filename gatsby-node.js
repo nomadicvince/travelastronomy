@@ -11,6 +11,10 @@ exports.createPages = async({ actions, graphql}) => {
       edges{
         node{
           slug
+          location{
+            lat
+            lon
+          }
         }
       }
     }
@@ -22,6 +26,8 @@ exports.createPages = async({ actions, graphql}) => {
             component: path.resolve("./src/templates/blogTemplate.js"),
             context: {
                 slug:node.slug,
+                lat: node.location.lat,
+                lon: node.location.lon,
             }
         })
     })

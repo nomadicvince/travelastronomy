@@ -24,12 +24,29 @@ module.exports = {
     options: {
       name: `images`,
       path: `${__dirname}/src/images/`,
-    },
+    },    
   },
+  {
+    resolve: 'gatsby-plugin-robots-txt',
+    options: {
+      host: 'https://www.travelastronomy.com',
+      sitemap: 'https://www.travelastronomy.com/sitemap.xml',
+      policy: [{ userAgent: '*', allow: '/' }]
+    }
+  },
+  {
+    resolve: `gatsby-source-googlemaps-static`,
+    options: {
+        key: process.env.GOOGLE_MAPS_KEY,
+        center: `LATITUDE,LONGITUDE || CITY,REGION`,
+    },
+},
   `gatsby-plugin-styled-components`,
   `gatsby-transformer-sharp`, 
   `gatsby-plugin-sharp`,
   `gatsby-plugin-transition-link`,
-  `gatsby-plugin-react-helmet`
+  `gatsby-plugin-react-helmet`,
+  `gatsby-plugin-sitemap`,
+  'gatsby-plugin-robots-txt'
 ],
 }
