@@ -12,7 +12,7 @@ const blogTemplate = ({data}) => {
   
   const containerStyle = {
     width: '600px',
-    height: '600px'
+    height: '400px'
   };
 
   const center = { 
@@ -34,13 +34,12 @@ const blogTemplate = ({data}) => {
               <div className={styles.date}>
                 <p>{date}</p>
               </div>
-              <div>
-                <p>{content}</p>
-                <p>{additional}</p>
-                <p>{offthebeatenpath}</p>
-
-              </div>
-              <div>
+              <div className={styles.row}>
+                <div className={styles.column}>
+                    <p>{content}</p>
+              <AniLink className={styles.link} fade to='/blogs' >Back to Blogs</AniLink>
+                </div>
+                <div className={styles.column}>
                 <LoadScript
                   googleMapsApiKey={process.env.GOOGLE_MAPS_KEY}
                 >
@@ -53,9 +52,16 @@ const blogTemplate = ({data}) => {
                     >
 
                     </GoogleMap>
-                </LoadScript>
-              </div><br />
-              <AniLink className={styles.link} fade to='/blogs' >Back to Blogs</AniLink>
+                </LoadScript><br /><hr /><br />
+                <p><span className={styles.headings}>If You Go</span></p>
+                <p>{additional}</p>
+                <p><span className={styles.headings}>Off the Beaten Path</span></p>
+                <p>{offthebeatenpath}</p>
+                </div>
+              </div>
+              <div>
+
+              </div>
             </div>
           </div>
         </Layout>

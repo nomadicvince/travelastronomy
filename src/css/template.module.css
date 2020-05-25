@@ -9,8 +9,19 @@
   width: 100%;
   height: auto;
   color: var(--mainBlack);
-  padding:  20px 0;
 }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+}
+
+.column {
+  flex: 50%;
+  padding-right: 15px;
+}
+
 
 .center {
   width: 80vw;
@@ -51,6 +62,13 @@
   font-size: 1rem;
   font-weight: 300;
   margin: 1rem 0;
+}
+
+.headings {
+  letter-spacing: var(--citySpacing);
+  font-size: 1rem;
+  font-weight: 800;
+  padding: 11rem 0;
 }
 
 .author{

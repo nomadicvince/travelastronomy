@@ -47,6 +47,7 @@ module.exports = {
   `gatsby-plugin-transition-link`,
   `gatsby-plugin-react-helmet`,
   `gatsby-plugin-sitemap`,
+  `gatsby-plugin-smoothscroll`,
   'gatsby-plugin-robots-txt'
 ],
 }
